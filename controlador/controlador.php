@@ -1,5 +1,4 @@
 <?php
-
 class controlador {
 	public $modelo;
 	public $accion;
@@ -35,13 +34,4 @@ class controlador {
 		}//Cierre If
 	} //Cierre metodo
 	
-}//CIerre clase
-?>
-
-
-
-
-
-
-
-
+}//CIerre clase?>

@@ -95,7 +95,4 @@ class alumno extends database{
 			$this->error=$e->getMessage();
 		}
 	}
-}
-
-
-?>
+}?>

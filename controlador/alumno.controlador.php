@@ -1,5 +1,4 @@
 <?php
-
 class alumnocontrolador {
 	public $error;
 	public $objeto;
@@ -31,6 +30,11 @@ class alumnocontrolador {
 		
 	}
 	function ver(){
+		//Llamamos al encabezado
+		include("vista/header.php");
+		//Cuerpo de la Pagina
+		//Pie de la pagina
+		include("vista/footer.php");
 		
 	}
 	function nuevo(){
