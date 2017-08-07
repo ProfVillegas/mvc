@@ -1,5 +1,5 @@
 <?php
-include "database.class.php";
+
 
 class carrera extends database{
 	public $clave;
@@ -91,25 +91,6 @@ class carrera extends database{
 			$this->error=$e->getMessage();
 		}
 	}
-}
-
-
-$sistema=new carrera();
-
-
-$arreglo['clave']="tu";
-$arreglo['nombre']="TSU en Turismo";
-$arreglo['activo']=1;
-
-
-$sistema->insertar($arreglo);
-
-echo "<pre>";
-print_r($sistema->listar());
-echo "</pre>";
-
-if($sistema->error!=null){
-	echo $sistema->error;
 }
 
 

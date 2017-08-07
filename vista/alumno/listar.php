@@ -1,5 +1,11 @@
+<div class="container">
+	<a href="<?php echo BASE_URL."alumno/nuevo";?>" 
+	class="btn btn-raised btn-primary">Nuevo</a>
+</div>
 <section class="container">
-	<table class="table">
+
+	<div class="table-responsive">
+	<table class="table table-striped table-hover table-condensed">
 		<thead>
 			<tr>
 				<td>Matricula</td>
@@ -21,5 +27,5 @@
 			?>
 		</tbody>
 	</table>
-	
+	</div>
 </section>

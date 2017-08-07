@@ -19,6 +19,9 @@ class controlador {
 			$controlador=$this->modelo."controlador";
 			$controlador = new $controlador();
 			
+			$controlador->id=$this->id;
+			$controlador->accion=$this->accion;
+			
 			//Condición para buscar un metodo válido
 			if(method_exists($controlador,$this->accion)){
 				if($this->id==null){
