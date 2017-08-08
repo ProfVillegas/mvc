@@ -18,9 +18,22 @@
 				foreach($data as $d){
 			?>
 			<tr>
-				<td><?php echo $d->matricula;?></td>
+				<td>
+				<a href="<?php echo BASE_URL;?>alumno/actualizar/<?php echo $d->matricula ;?>">
+				<?php echo $d->matricula;?>
+				   </a>
+				</td>
 				<td><?php echo $d->nombre;?></td>
-				<td><?php echo $d->fecha_nac;?></td>
+				<td><?php echo $d->fecha_nac;?>
+					<a class="btn btn-primary" href="<?php echo BASE_URL;?>alumno/actualizar/<?php echo $d->matricula ;?>">
+						Editar
+				   </a>
+				   
+					<a class="btn btn-primary" href="<?php echo BASE_URL;?>alumno/eliminar/<?php echo $d->matricula ;?>">
+						Eliminar
+				   </a>
+				</td>
+				</td>
 			</tr>
 			<?php
 				}
