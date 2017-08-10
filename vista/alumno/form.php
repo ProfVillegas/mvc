@@ -1,5 +1,5 @@
 <div class="container">
- <form class="form-horizontal" action="<?php echo BASE_URL;?>">
+ <form class="form-horizontal" action="<?php echo BASE_URL;?>alumno/Guardar" method="post" enctype="multipart/form-data">
   <fieldset>
     <legend>Legend</legend>
     <div class="form-group">

@@ -75,16 +75,31 @@ class alumnocontrolador {
 	function eliminar($id){
 		$obj=$this->objeto->buscar($this->id);
 		if($obj){
-			//$this->objeto->eliminar($this->id);
+			$this->objeto->eliminar($this->id);
 			echo 1; //Si encontro el ID
 			
 		} else {
 			echo "error: usuario no localizado";
 		}
-		
-		
 	}
-	
+	/**Método Guardar**/
+	function guardar(){
+		//Si existe el ID es una actualizacion, de lo contrario es una inserción
+		$obj=$this->objeto->buscar($_POST['matricula']); //Recuperamos los datos del registro
+		if($obj){ //Si se localiza se llama al metodo actualizar
+			//Los datos se envian por el $_POST
+			$this->objeto->actualizar($_POST);
+			$this->error="Actualización satisfactoria";
+			
+			
+		} else{
+			//Los datos se envian por el $_POST
+			$this->objeto->insertar($_POST);
+			$this->error="Registro creado satisfactoriamente satisfactoria";
+			
+		}
+		$this->getMensaje();
+	}
 	
 	function getCarreras(){
 		try{
@@ -102,6 +117,17 @@ class alumnocontrolador {
 		catch(Exception $e){
 			$this->error=$e->getMessage();
 		}
+	}
+	/*Esta ventana es para mostrar cuando exista un error en el modelo alumno*/
+	function getMensaje(){
+			$mod="alumno"; //Se guarda el nombre del modelo actual
+			//Llamamos al encabezado
+			include("vista/header.php");
+			//Cuerpo de la Pagina
+			include("vista/mensaje.php");
+			//Pie de la pagina
+			include("vista/footer.php");
+			
 	}
 	
 }
