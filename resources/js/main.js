@@ -34,7 +34,7 @@ $(document).ready(function () {
 						
 					});
 				} else { //No encontro la clave
-					$('.info-delete').html('<span class="label label-danger">'+msg+'</span>').delay(1500,function(){
+					$('.info-delete').html('<span class="label label-danger">'+msg+'</span>').delay(6500,function(){
 						$('#exampleModal').modal('hide'); //Oculta el modal
 					});
 				}
