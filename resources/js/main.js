@@ -4,6 +4,7 @@ $(document).ready(function () {
 	var LinkDlt = ''; //Se declará una variable global para guardar la URL que se desea eliminar
 	var FilaSelect = ''; //Se almacenara la información de la fila a borrar
 	$('#exampleModal').on('show.bs.modal', function (event) {
+		LinkDlt="";
 		var button = $(event.relatedTarget); // Se toma la información del boton que envio a llamar al modal
 		LinkDlt = button.data('url'); // Se extrae la información del atributo data-*
 		//Obtener los datos de las primeras dos columnas de la fila a eliminar

@@ -28,7 +28,7 @@ href="<?php echo BASE_URL;?>resources/css/style.css">
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#"><span class="glyphicon glyphicon-user"></span>Sign up</a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>login</a></li>
+				<li><a href="<?php echo BASE_URL."login/logout" ;?>"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
 			</ul>
 		</div>
 	</div>	

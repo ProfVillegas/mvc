@@ -25,9 +25,12 @@ class logincontrolador {
 	/**Método Guardar**/
 	function guardar(){		
 	}
-	function login (){
-		echo "<h1>Falta inicio de sesion</h1>";
-		echo "<a href='".BASE_URL."login/registrar' >Iniciar</a>";
+	function log(){
+		include("vista/header.php");
+		include("vista/login/login.php");
+		include("vista/footer.php");
+		//echo "<h1>Falta inicio de sesion</h1>";
+		//echo "<a href='".BASE_URL."login/registrar' >Iniciar</a>";
 	}
 	function logout(){
 		session_destroy();
